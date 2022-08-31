@@ -13,8 +13,8 @@ export const Home = (props: HomeProps) => {
 
     return (
         <div>
-            <div className="home-container" style={{ marginTop: isMobile ? "44px" : undefined}}> 
-            HOME
+            <div className="home-container" style={{ marginTop: isMobile ? "44px" : undefined }}>
+                HOME
             </div>
         </div>
     )

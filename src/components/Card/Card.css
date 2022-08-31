@@ -1,0 +1,16 @@
+.card-container {
+    background-color: var(--tan);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    border-radius: 15px;
+}
+
+.inner-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}

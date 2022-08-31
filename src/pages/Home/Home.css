@@ -4,5 +4,6 @@
     display: flex;
     align-items: center;
     flex: 1;
-    margin-top: 64px; /* space for navbar*/
-  }
+    margin-top: 64px;
+    /* space for navbar*/
+}
