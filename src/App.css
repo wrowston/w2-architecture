@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -32,7 +32,51 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+} */
+
+:root {
+  --white: #ffffff;
+  --tan: #E6C2A9;
+  --dark-grey: #7d7d7d;
+  --light-grey: #cacaca;
+}
+
+.light-text {
+  color: var(--tan);
+}
+
+.dark-text {
+  color: var(--dark-orange);
+}
+
+.light-background {
+  background-color: var(--tan);
+}
+
+.dark-background {
+  background-color: var(--dark-orange);
+}
+
+.light-orange-background {
+  background-color: var(--light-orange);
+}
+
+.light-orange-color {
+  color: var(--light-orange);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-img {
+  max-width: 25%;
+  height: auto;
 }

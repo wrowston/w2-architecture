@@ -2,6 +2,7 @@ import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Card } from '../../components/Card/Card';
 import './Services.css'
+import '../../App.css';
 import ServiceSrc from '../../images/w2-services-1.png'
 
 type ServicesProps = {}
@@ -29,29 +30,54 @@ export const Services = (props: ServicesProps) => {
 
 
     return (
-        <div className='service-container'>
-            {servicesList.length == 0 ? (
-                <div>No Services available at this time</div>
-            ) : (
-                <div>
-                    {servicesList.map((service, i) => {
-                        return (
-                            <Card style={{ marginTop: isMobile ? "25px" : "50px" }}
-                                key={i}>
-                                <div>
-                                    <div>
-                                        {service.title}
-                                    </div>
-                                    <div>
-                                        {service.description}
-                                    </div>
-                                    <img src={service.image} style={{ marginTop: "50px", maxWidth: isMobile ? "50%" : undefined }} />
-                                </div>
-                            </Card>
-                        )
-                    })}
+        <div className='container'>
+            <div className='service-container' style={{ marginTop: isMobile ? "44px" : "64px" }}>
+                <div className='service-header'>
+                    We offer a variety of services at W2.
                 </div>
-            )}
+
+                {servicesList.length === 0 ? (
+                    <div>No Services available at this time</div>
+                ) : (
+                    <div>
+                        {servicesList.map((service, i) => {
+                            return (
+                                <Card key={i}>
+                                    {i % 2 !== 0 ?
+                                        <div className='service-inner-card'>
+                                            <div className='service-card-text'>
+                                                <div className='service-title'>
+                                                    {service.title}
+                                                </div>
+                                                <div className='service-description'>
+                                                    {service.description}
+                                                </div>
+                                            </div>
+                                            <div className='service-image-container' style={{ justifyContent: 'flex-end' }}>
+                                                <img className='service-card-image' src={service.image} alt={service.title} style={{ margin: "25px", maxWidth: isMobile ? "50%" : undefined }} />
+                                            </div>
+                                        </div>
+                                        :
+                                        <div className='service-inner-card'>
+                                            <div className='service-image-container'>
+                                                <img className='service-card-image' src={service.image} alt={service.title} style={{ margin: "25px", maxWidth: isMobile ? "50%" : undefined }} />
+                                            </div>
+                                            <div className='service-card-text'>
+                                                <div className='service-title'>
+                                                    {service.title}
+                                                </div>
+                                                <div className='service-description'>
+                                                    {service.description}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </Card>
+                            )
+                        })}
+                    </div>
+                )}
+            </div>
         </div>
     )
 }

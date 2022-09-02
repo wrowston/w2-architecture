@@ -2,3 +2,47 @@
     margin-top: 64px;
     /* space for navbar*/
 }
+
+.service-header {
+    margin: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-inner-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.service-card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.service-title {
+    margin-bottom: 20px;
+    font-size: medium;
+}
+
+.service-description {
+    font-size: small;
+}
+
+.service-image-container {
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.service-card-image {
+    width: 65%;
+    height: auto;
+}

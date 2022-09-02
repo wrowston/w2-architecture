@@ -1,11 +1,14 @@
 .card-container {
-    background-color: var(--tan);
+    background-color: var(--white);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 80%;
-    border-radius: 15px;
+    margin-left: 10%;
+    border-color: var(--light-grey);
+    border-style: none none groove none;
+    border-width: thin;
 }
 
 .inner-container {

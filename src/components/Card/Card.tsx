@@ -17,13 +17,12 @@ export const Card = (props: CardProps) => {
 
     const { style, children } = props;
     return (
-        <div className="card-container"
-            style={{ ...style, width: isMobile ? "90%" : style?.width }}
-        >
-            <div
-                className='inner-container'
-                style={innerContainerStyle}
-            >
+        <div className="card-container" style={{
+            ...style,
+            width: isMobile ? "90%" : style?.width,
+            marginLeft: isMobile ? "5%" : style?.width
+        }}>
+            <div className='inner-container' style={innerContainerStyle}>
                 {children}
             </div>
         </div>
